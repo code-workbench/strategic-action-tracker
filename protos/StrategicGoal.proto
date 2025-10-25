@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package strategic_action_tracker;
+
+import "protos/AuditEntry.proto";
+import "protos/GoalReference.proto";
+
+message StrategicGoal {
+  // An integer primary key value
+  int32 id = 1;
+  
+  // The name of the strategic goal for tracking
+  string name = 2;
+  
+  // The goal reference objects attached to this strategic goal
+  repeated GoalReference goal_references = 3;
+  
+  // The audit entry values
+  AuditEntry audit_entry = 4;
+}

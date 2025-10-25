@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package strategic_action_tracker;
+
+import "google/protobuf/timestamp.proto";
+
+message AuditEntry {
+  // The date the entry is created
+  google.protobuf.Timestamp date_created = 1;
+  
+  // The username of the user who created it
+  string created_by = 2;
+  
+  // The date the entry was last modified
+  google.protobuf.Timestamp date_modified = 3;
+  
+  // The username of the user who modified it
+  string modified_by = 4;
+}

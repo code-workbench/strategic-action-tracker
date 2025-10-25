@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package strategic_action_tracker;
+
+import "protos/AuditEntry.proto";
+
+message GoalNote {
+  // An integer primary key value
+  int32 id = 1;
+  
+  // The foreign key relating this to the goal
+  int32 goal_key = 2;
+  
+  // The notes associated with this item
+  string note_text = 3;
+  
+  // The audit entry values for the record
+  AuditEntry audit_entry = 4;
+}

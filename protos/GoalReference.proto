@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package strategic_action_tracker;
+
+import "protos/AuditEntry.proto";
+
+message GoalReference {
+  // An integer primary key value
+  int32 id = 1;
+  
+  // The foreign key relating this to the goal
+  int32 goal_key = 2;
+  
+  // The name of the resource
+  string name = 3;
+  
+  // The link url
+  string url = 4;
+  
+  // The name of the DisplayType
+  string display_text = 5;
+  
+  // The audit entry values
+  AuditEntry audit_entry = 6;
+}

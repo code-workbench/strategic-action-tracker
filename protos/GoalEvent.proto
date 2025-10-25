@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package strategic_action_tracker;
+
+import "google/protobuf/timestamp.proto";
+import "protos/AuditEntry.proto";
+
+message GoalEvent {
+  // An integer primary key value
+  int32 id = 1;
+  
+  // The foreign key relating this to the goal
+  int32 goal_key = 2;
+  
+  // The date of the event being tracked
+  google.protobuf.Timestamp event_date = 3;
+  
+  // The description of the event that took place
+  string description = 4;
+  
+  // The audit entry details for this record
+  AuditEntry audit_entry = 5;
+}
