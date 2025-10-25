@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package strategic_action_tracker;
+
+import "protos/AuditEntry.proto";
+
+message GoalAction {
+  // An integer primary key value
+  int32 id = 1;
+  
+  // The foreign key relating this to the goal
+  int32 goal_key = 2;
+  
+  // The description of the action required to be taken
+  string action_description = 3;
+  
+  // The user name of the person the action is assigned to
+  string action_assigned_to = 4;
+  
+  // The status of the action. Can be "Not Started", "In Progress", "Waiting for Reply", "Completed"
+  string action_status = 5;
+  
+  // The audit entry values
+  AuditEntry audit_entry = 6;
+}

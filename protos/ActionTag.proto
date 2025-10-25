@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package strategic_action_tracker;
+
+message ActionTag {
+  // The primary key for the table
+  int32 action_tag_id = 1;
+  
+  // The foreign key of the action
+  int32 action_id = 2;
+  
+  // The foreign key of the tag
+  int32 tag_id = 3;
+}

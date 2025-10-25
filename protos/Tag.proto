@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package strategic_action_tracker;
+
+import "protos/AuditEntry.proto";
+
+message Tag {
+  // An integer primary key value
+  int32 id = 1;
+  
+  // The Display text of the tag
+  string tag_name = 2;
+  
+  // The audit entry values
+  AuditEntry audit_entry = 3;
+}
